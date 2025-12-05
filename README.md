@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🧭 หน้าแนะนำสำหรับ Sidebar / Navbar (ไม่มีระบบ Login)
+หน้า จุดประสงค์ คำแนะนำ UX
+🏠 Home / หน้าแรก แนะนำเว็บ, จุดเด่น, เรียนรู้ได้เลย มีปุ่ม “เริ่มเรียน”, แสดงคอร์สเด่น
+📚 Courses / คอร์สทั้งหมด รวมบทเรียนทั้งหมด แบ่งตามหมวดหมู่ เช่น Animation, Design
+🎓 Learn / เรียนรู้ เข้าสู่บทเรียนแบบ step-by-step ใช้ layout ที่อ่านง่าย, มีภาพประกอบ
+🧪 Quiz / แบบทดสอบ ทดสอบความเข้าใจหลังเรียน ไม่ต้องล็อกอิน, แสดงคะแนนทันที
+📂 Resources / สื่อประกอบ ดาวน์โหลดไฟล์, GIF, PDF ใช้ Cloud Storage หรือ CDN
+❓ FAQ / คำถามที่พบบ่อย ตอบข้อสงสัยทั่วไป ช่วยลดภาระ support
+📢 Announcements / ประกาศ ข่าวสาร, อัปเดตบทเรียน ใช้ markdown หรือ CMS
+📬 Contact / ติดต่อเรา ให้ผู้ใช้ส่งคำถามหรือข้อเสนอแนะ ใช้ฟอร์มหรืออีเมลลิงก์
+🌐 About / เกี่ยวกับเว็บ แนะนำทีมผู้สร้าง, เป้าหมาย เพิ่มความน่าเชื่อถือ
+🏠 หน้าแรกควรมีอะไรบ้าง
+Hero Section:
 
-## Getting Started
+ชื่อเว็บ + tagline เช่น “เรียนรู้การสร้างภาพเคลื่อนไหวเบื้องต้น”
 
-First, run the development server:
+ปุ่ม “เริ่มเรียนเลย” หรือ “ดูคอร์สทั้งหมด”
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+แนะนำคอร์สเด่น:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+แสดง 3–5 คอร์สที่น่าสนใจ พร้อมภาพและคำอธิบายสั้น ๆ
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ภาพประกอบหรือ GIF:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ใช้ภาพเคลื่อนไหวเพื่อดึงดูดสายตา
 
-## Learn More
+จุดเด่นของเว็บ:
 
-To learn more about Next.js, take a look at the following resources:
+เรียนฟรี, ไม่ต้องสมัคร, มีแบบทดสอบ, รองรับมือถือ
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ปุ่มนำทางเร็ว:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+เช่น “ไปยังบทเรียน”, “ทำแบบทดสอบ”, “ดาวน์โหลดสื่อ”
 
-## Deploy on Vercel
+Footer:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ลิงก์ไปยังหน้าอื่น ๆ, ข้อมูลติดต่อ, ลิขสิทธิ์
