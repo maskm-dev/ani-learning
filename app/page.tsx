@@ -1,6 +1,8 @@
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import BrandBanner from "@/components/BrandBanner";
+import CourseSearch from "@/components/CourseSearch";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       {/* ส่วนเนื้อหาหลัก แบ่งเป็น 2 ฝั่ง */}
       <main>
         <HeroSection />
+        <BrandBanner />
+        <CourseSearch />
       </main>
       <Footer />
     </div>

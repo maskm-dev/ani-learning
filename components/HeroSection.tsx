@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import "./css/CTAButton.css";
 
 const HeroSection = () => {
   return (
@@ -16,7 +17,7 @@ const HeroSection = () => {
         className="mb-6"
       >
         <Image
-          src="/images/animation.svg"
+          src="/svgs/animation.svg"
           alt="Logo"
           width={80}
           height={80}
@@ -34,26 +35,27 @@ const HeroSection = () => {
       </p>
 
       {/* CTA Buttons */}
-      <div className="flex gap-4 mb-12">
-        <motion.div whileHover={{ scale: 1.05 }}>
-          <Link
-            href="/courses"
-            className="px-8 py-3 rounded-full font-semibold text-white
-                       bg-linear-to-r from-blue-500 to-purple-500 shadow-lg hover:shadow-xl transition"
-          >
-            Get Started
-          </Link>
-        </motion.div>
-        <motion.div whileHover={{ scale: 1.05 }}>
+      <div className="flex gap-4 mb-12 items-center">
+        <Link href="/courses" className="primary-button flex rounded-full">
+          Get Started
+        </Link>
+
+        <motion.button whileHover={{ scale: 1.05 }} className="flex">
           <Link
             href="/about"
             className="flex items-center gap-2 px-8 py-3 rounded-full font-semibold
-                       bg-white text-gray-700 shadow hover:bg-gray-100 transition"
+                 bg-white text-gray-700 shadow transition-all duration-300
+                 hover:bg-gray-100"
           >
-            <Play size={18} />
+            <motion.div
+              whileHover={{ x: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Play size={22} />
+            </motion.div>
             Watch Video
           </Link>
-        </motion.div>
+        </motion.button>
       </div>
 
       <motion.div
