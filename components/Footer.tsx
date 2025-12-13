@@ -1,26 +1,59 @@
+import Image from "next/image";
 import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-8 border-t border-gray-200">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-        <div className="mb-4 md:mb-0">
+    <footer className="text-gray-600 body-font bg-amber-300">
+      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+        <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
           <Logo />
-          <p className="text-sm text-gray-500 mt-2">
-            © 2024 AnimLearn. All rights reserved.
-          </p>
-        </div>
-        <div className="flex gap-6 text-gray-600 text-sm">
-          <a href="#" className="hover:text-blue-600">
-            นโยบายความเป็นส่วนตัว
+          <span className="ml-3 text-xl">Animation-Learning</span>
+        </a>
+        <p className="text-sm text-gray-900 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+          © 2020 Examblocks —
+          <a
+            href="https://github.com/maskm-dev"
+            className="text-gray-900 ml-1"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            @maskm-dev
           </a>
-          <a href="#" className="hover:text-blue-600">
-            ข้อกำหนดและเงื่อนไข
+        </p>
+        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <a className="text-gray-500">
+            <Image
+              src="/footers/facebook.svg"
+              alt="facebook"
+              width={24}
+              height={24}
+            />
           </a>
-          <a href="#" className="hover:text-blue-600">
-            ติดต่อเรา
+          <a className="ml-3 text-gray-500">
+            <Image
+              src="/footers/github.svg"
+              alt="github"
+              width={24}
+              height={24}
+            />
           </a>
-        </div>
+          <a className="ml-3 text-gray-500">
+            <Image
+              src="/footers/logmein.svg"
+              alt="linkin"
+              width={24}
+              height={24}
+            />
+          </a>
+          <a className="ml-3 text-gray-500">
+            <Image
+              src="/footers/youtube.svg"
+              alt="youtube"
+              width={24}
+              height={24}
+            />
+          </a>
+        </span>
       </div>
     </footer>
   );

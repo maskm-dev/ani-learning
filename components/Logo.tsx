@@ -7,7 +7,6 @@ const Logo = () => {
         <Film className="w-8 h-8" />
         <Play className="w-4 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white fill-current" />
       </div>
-      <span>AnimLearn</span>
     </div>
   );
 };

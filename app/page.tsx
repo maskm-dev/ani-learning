@@ -1,12 +1,15 @@
+"use client"
+
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import BrandBanner from "@/components/BrandBanner";
 import CourseSearch from "@/components/CourseSearch";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-white pt-24 bg-linear-to-b from-blue-300 to-blue-100">
+    <div className="min-h-screen flex flex-col bg-white pt-24 bg-linear-to-b from-blue-300 to-blue-100 relative">
       <Image
         src="/images/blueskywhite.png"
         alt="CloudsBg"
@@ -16,11 +19,42 @@ export default function Home() {
       />
       {/* ส่วนเนื้อหาหลัก แบ่งเป็น 2 ฝั่ง */}
       <main>
-        <HeroSection />
-        <BrandBanner />
-        <CourseSearch />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <HeroSection />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <BrandBanner />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <CourseSearch />
+        </motion.div>
       </main>
-      <Footer />
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <Footer />
+      </motion.div>
     </div>
   );
 }
